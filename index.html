@@ -8,16 +8,10 @@
 <style>
 /* ===== THEMES ===== */
 :root {
-  --bg:#f0f4ff;--s1:#ffffff;--s2:#f5f7ff;--s3:#e8edff;
-  --border:#dde3f8;--accent:#1a73e8;--green:#00b894;
-  --yellow:#f9a825;--red:#e53935;--purple:#7c4dff;
-  --orange:#f57c00;--text:#1a1f36;--muted:#6b7280;--r:14px;
-}
-body.theme-dark {
   --bg:#07090f;--s1:#0d1117;--s2:#161b22;--s3:#21262d;
   --border:#30363d;--accent:#58a6ff;--green:#3fb950;
   --yellow:#e3b341;--red:#f85149;--purple:#bc8cff;
-  --orange:#ffa657;--text:#e6edf3;--muted:#8b949e;
+  --orange:#ffa657;--text:#e6edf3;--muted:#8b949e;--r:12px;
 }
 body.theme-blue {
   --bg:#020c1b;--s1:#0a192f;--s2:#112240;--s3:#1d3461;
@@ -32,23 +26,29 @@ body.theme-purple {
   --orange:#fb923c;--text:#f3e8ff;--muted:#a78bfa;
 }
 body.theme-green {
-  --bg:#f0fff4;--s1:#ffffff;--s2:#f0fdf4;--s3:#dcfce7;
-  --border:#bbf7d0;--accent:#16a34a;--green:#15803d;
-  --yellow:#ca8a04;--red:#dc2626;--purple:#7c3aed;
-  --orange:#ea580c;--text:#14532d;--muted:#6b7280;
+  --bg:#020f06;--s1:#071a0d;--s2:#0d2414;--s3:#123018;
+  --border:#1a4a22;--accent:#4ade80;--green:#86efac;
+  --yellow:#fde047;--red:#f87171;--purple:#c084fc;
+  --orange:#fb923c;--text:#dcfce7;--muted:#6ee7b7;
+}
+body.theme-light {
+  --bg:#f8fafc;--s1:#ffffff;--s2:#f1f5f9;--s3:#e2e8f0;
+  --border:#cbd5e1;--accent:#3b82f6;--green:#22c55e;
+  --yellow:#eab308;--red:#ef4444;--purple:#8b5cf6;
+  --orange:#f97316;--text:#0f172a;--muted:#64748b;
 }
 body.theme-red {
-  --bg:#fff5f5;--s1:#ffffff;--s2:#fff0f0;--s3:#ffe4e4;
-  --border:#fecaca;--accent:#dc2626;--green:#16a34a;
-  --yellow:#ca8a04;--red:#b91c1c;--purple:#7c3aed;
-  --orange:#ea580c;--text:#450a0a;--muted:#9ca3af;
+  --bg:#0f0000;--s1:#1a0000;--s2:#240000;--s3:#300000;
+  --border:#5a0000;--accent:#ff6b6b;--green:#4ade80;
+  --yellow:#fbbf24;--red:#ff4444;--purple:#c084fc;
+  --orange:#fb923c;--text:#ffe4e4;--muted:#fca5a5;
 }
 
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Rajdhani',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:70px;transition:background 0.3s,color 0.3s;}
 
 /* Header */
-header{background:var(--s1);border-bottom:1px solid var(--border);padding:13px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;box-shadow:0 2px 12px rgba(26,115,232,0.08);}
+header{background:var(--s1);border-bottom:1px solid var(--border);padding:13px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;}
 .logo{font-size:20px;font-weight:700;letter-spacing:1px;}
 .logo .s{color:var(--accent);}
 .logo .k{color:var(--green);}
@@ -57,7 +57,7 @@ header{background:var(--s1);border-bottom:1px solid var(--border);padding:13px 1
 .hdr-btn:hover{border-color:var(--accent);color:var(--accent);}
 
 /* Bottom Nav */
-.bnav-bar{position:fixed;bottom:0;left:0;right:0;background:var(--s1);border-top:1px solid var(--border);display:flex;z-index:200;padding:2px 0;box-shadow:0 -2px 12px rgba(26,115,232,0.08);}
+.bnav-bar{position:fixed;bottom:0;left:0;right:0;background:var(--s1);border-top:1px solid var(--border);display:flex;z-index:200;padding:2px 0;}
 .bnav{flex:1;border:none;background:transparent;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;color:var(--muted);cursor:pointer;padding:6px 2px;display:flex;flex-direction:column;align-items:center;gap:2px;transition:color 0.2s;}
 .bnav.active{color:var(--accent);}
 .bnav-ic{font-size:18px;line-height:1;}
@@ -69,7 +69,7 @@ header{background:var(--s1);border-bottom:1px solid var(--border);padding:13px 1
 .pg-sub{font-size:11px;color:var(--muted);font-family:'JetBrains Mono',monospace;margin-bottom:16px;}
 
 /* Cards */
-.card{background:var(--s1);border:1.5px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:12px;transition:background 0.3s;box-shadow:0 2px 8px rgba(26,115,232,0.05);}
+.card{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:12px;transition:background 0.3s;}
 .card-label{font-size:10px;font-weight:700;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:12px;}
 
 /* Pills */
@@ -184,12 +184,12 @@ input[type=range]{flex:1;height:4px;accent-color:var(--accent);background:var(--
 .lang-btn.active{border-color:var(--accent);color:var(--accent);}
 
 /* Home */
-.home-banner{background:linear-gradient(135deg,#1a73e8,#1557b0);border:none;border-radius:var(--r);padding:24px 20px;margin-bottom:16px;text-align:center;color:#fff;box-shadow:0 8px 24px rgba(26,115,232,0.3);}
-.home-banner h2{font-size:26px;font-weight:700;margin-bottom:4px;color:#fff;}
-.home-banner p{font-size:11px;color:rgba(255,255,255,0.75);font-family:'JetBrains Mono',monospace;}
+.home-banner{background:linear-gradient(135deg,rgba(88,166,255,0.12),rgba(188,140,255,0.08));border:1px solid rgba(88,166,255,0.2);border-radius:var(--r);padding:20px;margin-bottom:16px;text-align:center;}
+.home-banner h2{font-size:26px;font-weight:700;margin-bottom:4px;}
+.home-banner p{font-size:11px;color:var(--muted);font-family:'JetBrains Mono',monospace;}
 .tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.tc{background:var(--s1);border:1.5px solid var(--border);border-radius:var(--r);padding:16px;cursor:pointer;transition:all 0.2s;text-align:center;box-shadow:0 2px 8px rgba(26,115,232,0.06);}
-.tc:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 6px 20px rgba(26,115,232,0.15);}
+.tc{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);padding:16px;cursor:pointer;transition:all 0.2s;text-align:center;}
+.tc:hover{border-color:var(--accent);transform:translateY(-2px);}
 .tc-ic{font-size:28px;margin-bottom:6px;}
 .tc-name{font-size:14px;font-weight:700;margin-bottom:3px;}
 .tc-desc{font-size:11px;color:var(--muted);line-height:1.4;}
@@ -215,18 +215,8 @@ input[type=range]{flex:1;height:4px;accent-color:var(--accent);background:var(--
 <!-- HOME -->
 <div class="page active" id="page-home">
   <div class="home-banner">
-    <div style="display:flex;align-items:center;justify-content:space-between;">
-      <div style="text-align:left;">
-        <div style="font-size:13px;opacity:0.8;margin-bottom:4px;" id="t-subtitle">Xush kelibsiz!</div>
-        <h2 style="font-size:24px;margin-bottom:4px;">SecureKit Pro</h2>
-        <p style="font-size:12px;opacity:0.75;">Telefoningiz himoyalangan</p>
-        <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.2);border-radius:20px;padding:5px 12px;margin-top:8px;font-size:11px;">
-          <span style="width:8px;height:8px;background:#4ade80;border-radius:50%;display:inline-block;"></span>
-          <span>Barcha tizimlar xavfsiz</span>
-        </div>
-      </div>
-      <div style="font-size:64px;line-height:1;">🛡</div>
-    </div>
+    <h2>SecureKit Pro</h2>
+    <p id="t-subtitle">// kiberxavfsizlik vositalari</p>
   </div>
   <div class="tools-grid">
     <div class="tc" onclick="goPage('cipher')"><div class="tc-ic">🔐</div><div class="tc-name" data-t="cipher_title">Shifrlash</div><div class="tc-desc" data-t="cipher_desc">7 ta usul</div></div>
@@ -427,27 +417,27 @@ input[type=range]{flex:1;height:4px;accent-color:var(--accent);background:var(--
     <div class="card-label" data-t="theme">Rang / Mavzu</div>
     <div class="theme-grid">
       <div class="theme-btn active" onclick="setTheme('',this)">
-        <div class="theme-dot-row"><div class="td" style="background:#1a73e8"></div><div class="td" style="background:#00b894"></div><div class="td" style="background:#f0f4ff"></div></div>
-        <span>Ko'k (Asosiy)</span>
-      </div>
-      <div class="theme-btn" onclick="setTheme('theme-dark',this)">
         <div class="theme-dot-row"><div class="td" style="background:#58a6ff"></div><div class="td" style="background:#3fb950"></div><div class="td" style="background:#07090f"></div></div>
         <span data-t="dark">Qorong'i</span>
       </div>
       <div class="theme-btn" onclick="setTheme('theme-blue',this)">
         <div class="theme-dot-row"><div class="td" style="background:#64ffda"></div><div class="td" style="background:#ccd6f6"></div><div class="td" style="background:#020c1b"></div></div>
-        <span data-t="blue">Dengiz</span>
+        <span data-t="blue">Ko'k</span>
       </div>
       <div class="theme-btn" onclick="setTheme('theme-purple',this)">
         <div class="theme-dot-row"><div class="td" style="background:#c084fc"></div><div class="td" style="background:#e879f9"></div><div class="td" style="background:#0d0014"></div></div>
         <span data-t="purple">Binafsha</span>
       </div>
       <div class="theme-btn" onclick="setTheme('theme-green',this)">
-        <div class="theme-dot-row"><div class="td" style="background:#16a34a"></div><div class="td" style="background:#86efac"></div><div class="td" style="background:#f0fff4"></div></div>
+        <div class="theme-dot-row"><div class="td" style="background:#4ade80"></div><div class="td" style="background:#86efac"></div><div class="td" style="background:#020f06"></div></div>
         <span data-t="green">Yashil</span>
       </div>
+      <div class="theme-btn" onclick="setTheme('theme-light',this)">
+        <div class="theme-dot-row"><div class="td" style="background:#3b82f6"></div><div class="td" style="background:#22c55e"></div><div class="td" style="background:#f8fafc"></div></div>
+        <span data-t="light">Kunduzgi</span>
+      </div>
       <div class="theme-btn" onclick="setTheme('theme-red',this)">
-        <div class="theme-dot-row"><div class="td" style="background:#dc2626"></div><div class="td" style="background:#fecaca"></div><div class="td" style="background:#fff5f5"></div></div>
+        <div class="theme-dot-row"><div class="td" style="background:#ff6b6b"></div><div class="td" style="background:#4ade80"></div><div class="td" style="background:#0f0000"></div></div>
         <span data-t="red">Qizil</span>
       </div>
     </div>
@@ -651,7 +641,6 @@ function setTheme(cls, btn) {
   localStorage.setItem('sk_theme', cls);
   document.querySelectorAll('.theme-btn').forEach(b=>b.classList.remove('active'));
   if(btn) btn.classList.add('active');
-  toast(T.settings || 'Mavzu ozgardi!');
 }
 
 // ============================================================
@@ -692,7 +681,7 @@ async function doCipher(mode) {
   err.classList.remove('show');
   if(!txt.trim()){err.textContent=T.no_text;err.classList.add('show');return;}
   if(['gamma','vigenere','aes'].includes(CM)&&!key){err.textContent=T.no_key;err.classList.add('show');return;}
-  if(CM==='aes'&&key.length<8){err.textContent=(lang==='ru'?'Klyuch minimum 8 simvol!':lang==='en'?'Key must be at least 8 characters!':'Kalit kamida 8 ta belgi bolsin!');err.classList.add('show');return;}
+  if(CM==='aes'&&key.length<8){err.textContent=(lang==='ru'?'Ключ минимум 8 символов!':lang==='en'?'Key must be at least 8 characters!':'Kalit kamida 8 ta belgi bo\'lsin!');err.classList.add('show');return;}
 
   let r='';
   try {
@@ -787,8 +776,8 @@ function chkPW(pw){
   if(pw.length>=16)s++;
   if(/[A-Z]/.test(pw))s++;else tips.push(lang==='ru'?'Добавьте заглавные (A-Z)':lang==='en'?'Add uppercase (A-Z)':'Katta harf (A-Z)');
   if(/[a-z]/.test(pw))s++;else tips.push(lang==='ru'?'Добавьте строчные (a-z)':lang==='en'?'Add lowercase (a-z)':'Kichik harf (a-z)');
-  if(/[0-9]/.test(pw))s++;else tips.push(lang==='ru'?'Dobavte tsifry':lang==='en'?'Add numbers':'Raqam qoshing');
-  if(/[^A-Za-z0-9]/.test(pw))s+=2;else tips.push(lang==='ru'?'Dobavte simvoly':lang==='en'?'Add symbols (!@#)':'Belgi qoshing (!@#)');
+  if(/[0-9]/.test(pw))s++;else tips.push(lang==='ru'?'Добавьте цифры':lang==='en'?'Add numbers':'Raqam qo\'shing');
+  if(/[^A-Za-z0-9]/.test(pw))s+=2;else tips.push(lang==='ru'?'Добавьте символы (!@#)':lang==='en'?'Add symbols (!@#)':'Belgi qo\'shing (!@#)');
   if(pw.length>=20)s++;
   const pct=Math.min(100,Math.round((s/9)*100));
   const f=document.getElementById('strf'),t=document.getElementById('strt'),p=document.getElementById('strp');
@@ -1021,11 +1010,14 @@ function hideToast(){
   // Theme
   const savedTheme=localStorage.getItem('sk_theme')||'';
   document.body.className=savedTheme;
-  document.querySelectorAll('.theme-btn').forEach(b=>b.classList.remove('active'));
-  const themeMap={'':0,'theme-dark':1,'theme-blue':2,'theme-purple':3,'theme-green':4,'theme-red':5};
-  const idx=themeMap[savedTheme]??0;
-  const btns=document.querySelectorAll('.theme-btn');
-  if(btns[idx]) btns[idx].classList.add('active');
+  if(savedTheme){
+    document.querySelectorAll('.theme-btn').forEach(b=>{
+      b.classList.remove('active');
+    });
+    const idx={'':0,'theme-blue':1,'theme-purple':2,'theme-green':3,'theme-light':4,'theme-red':5}[savedTheme]??0;
+    const btns=document.querySelectorAll('.theme-btn');
+    if(btns[idx]) btns[idx].classList.add('active');
+  }
   // Lang
   const savedLang=localStorage.getItem('sk_lang')||'uz';
   lang=savedLang; T=LANGS[lang];
